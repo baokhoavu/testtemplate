@@ -26,7 +26,7 @@ ul.header li {
 
 .btn-outline-success {
   background-color: $standOutColor;
-  border: 1px solid $standOutColor;
+  border: 1px solid $whiteColor;
   color: white;
 
   @media #{$mobile} {
@@ -34,8 +34,9 @@ ul.header li {
   }
 
   &:hover {
-    background-color: $standOutColor;
-    border: 1px solid $whiteColor;
+    background-color: $whiteColor;
+    border: 1px solid $standOutColor;
+    color: $standOutColor;
   }
 }
 
@@ -164,7 +165,7 @@ footer {
   }
 
   a:hover{ 
-    color: $otherColor;
+    color: $standOurLighterColor;
     text-decoration: underline;
   }
 }
