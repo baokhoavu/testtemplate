@@ -10,11 +10,11 @@ import Article from './Article.jsx';
 // with /roster or /schedule. The / route will only match
 // when the pathname is exactly the string "/"
 const Main = () => (
-  <main>
+  <Switch>
       <Route exact path="/" component={Home}/>
       <Route exact path="/articles" component={Articles}/>
       <Route exact path="/articles/:id" component={Article}/>
-  </main>
+  </Switch>
 );
 
 export default Main;
