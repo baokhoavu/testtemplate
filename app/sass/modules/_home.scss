@@ -1,0 +1,31 @@
+.input-search {
+    padding: 13px;
+    height: auto;
+    border: 0;
+    border-bottom: 2px dotted $whiteColor;
+    border-radius: 0px; 
+    width: 100% !important;
+
+    &:hover {
+        border-bottom: 2px dotted $standOutColor;
+    }
+
+    @media #{$desktop} {
+        margin-right: 10px;
+    }
+
+    @media #{$mobile} {
+        margin-bottom: 10px;
+    }
+
+    @media #{$tablet} {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.homepage-search {
+    .btn {
+        width:100% !important;
+    }
+}
