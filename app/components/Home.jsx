@@ -19,7 +19,7 @@ export default class Home extends Component {
 
     render() {
       return (
-            <div>
+            <article>
                 {this.renderBreadcrumbs()}
                 <h1>ReactJs, Node and Bootstrap boilerplate</h1>
                 <p className="lead">
@@ -27,10 +27,10 @@ export default class Home extends Component {
                     <br /><br />
                     Integer vitae euismod risus, sit amet tincidunt est. Mauris aliquam et lorem sit amet laoreet. Phasellus elementum vestibulum libero in consectetur. Suspendisse ullamcorper facilisis congue. Donec eu mi purus. Etiam dictum sed arcu non feugiat. Sed sed tempor augue. Morbi et lectus quis elit porta rutrum a at magna. Suspendisse volutpat id ipsum sed consequat. In egestas tempor urna, at finibus velit fringilla eget. Aliquam eleifend, libero ut tincidunt tristique, nunc arcu faucibus velit, eget rutrum risus odio ac turpis. Morbi id ornare nulla. Integer eleifend euismod leo in pharetra. Vivamus tristique leo quis dolor scelerisque, a ultrices est consequat. Aenean eget purus lectus. Praesent non ante placerat, auctor leo vel, ultricies justo.
                 </p>
-                <div className="row col-lg-12 nopadding">
+                <section className="row col-lg-12 nopadding">
                     
-                </div>
-            </div>
+                </section>
+            </article>
       );
     }
 }
