@@ -103,8 +103,8 @@ header li a {
     background-color: #ffffff;
     color: $standOutColor !important;
    }
-    
-    
+
+
   }
 
   &:hover {
@@ -114,7 +114,7 @@ header li a {
     color: $standOutColor !important;
   }
 
-  
+
 }
 
 .nopadding {
@@ -157,8 +157,35 @@ footer {
     color: $standOutColor;
   }
 
-  a:hover{ 
+  a:hover{
     color: $standOurLighterColor;
     text-decoration: underline;
+  }
+}
+.header-row {
+  background-color: $otherColor;
+}
+.footer-row {
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.blue-box {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+}
+.grey-box {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 30px;
+  font-size: 16px;
+  ul {
+    margin-left: -15px;
+    position: relative;
+    top: 15px;
   }
 }
