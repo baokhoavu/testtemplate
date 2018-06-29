@@ -91,6 +91,11 @@ header {
     }
   }
 }
+
+.header span {
+  font-size: 30px;
+}
+
 header li a {
   color: #FFF !important;
   font-weight: bold;
@@ -113,8 +118,6 @@ header li a {
      }
     color: $standOutColor !important;
   }
-
-
 }
 
 .nopadding {
@@ -168,21 +171,92 @@ footer {
 .footer-row {
   width: 50%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 20px 0;
 }
-
+.home-mid-row {
+  margin-top: 50px;
+  text-align: center;
+  // font-size: 35px;
+}
+.center {
+  text-align: center;
+}
+.top-pad {
+  padding-top: 100px;
+  font-size: 25px;
+}
+.input-field {
+  width: 30%
+}
+.top-pad p {
+  margin: 50px 0;
+}
+.home-mid-row>p:nth-of-type(-n+2) {
+  font-size: 25px;
+}
+.home-mid-row>p:nth-of-type(3) {
+  margin-top: 65px;
+  font-size: 18px;
+}
+.button {
+  background: #ffffff;
+  border: unset;
+}
+.image-clickable {
+  width: 100px;
+}
+.home-mid-row form {
+  display: inline-block;
+}
+.submit-button {
+  display: block;
+  margin: 50px auto;
+  padding: 10px 40px;
+  border-radius: 15px;
+  background: #03a9f4;
+  color: #fff;
+}
+.home-right-list {
+  list-style: none;
+  margin-top: 20px;
+  text-align: center;
+}
+.home-right-list li{
+  font-size: 16px;
+  line-height: 35px;
+}
+.home-right-list>li:nth-of-type(1) {
+  color: green;
+}
+.top-title {
+  background: $otherColor;
+  width: 100%;
+  margin-bottom: 15px;
+}
 .blue-box {
   border: 1px solid black;
   padding: 10px;
+  background: #87cefa;
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
+}
+.footer-row>p {
+  text-align: center;
+}
+.footer-row .line {
+  border-bottom: 1px solid black;
+  position: relative;
+  bottom: 8px;
+  width: 15%;
+  margin: 0 auto;
 }
 .grey-box {
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
   padding: 30px;
-  font-size: 16px;
+  font-size: 13px;
+  background: $otherColor;
   ul {
     margin-left: -15px;
     position: relative;
