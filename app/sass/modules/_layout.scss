@@ -10,8 +10,9 @@ body {
 }
 
 #container {
-  padding: 20px;
-  padding-top: 0px;
+  min-height: 510px;
+  padding: 50px;
+  padding-top: 30px;
   background-color: rgba(255, 255, 255, 0.40);
 }
 
@@ -182,7 +183,7 @@ footer {
   text-align: center;
 }
 .top-pad {
-  padding-top: 100px;
+  padding-top: 40px;
   font-size: 25px;
 }
 .input-field {
@@ -208,7 +209,17 @@ footer {
 .home-mid-row form {
   display: inline-block;
 }
-.submit-button {
+.input-bar {
+  min-width: 500px;
+  border: 1px solid black;
+}
+@media screen and (max-width:400px) {
+  .input-bar {
+    min-width: 250px;
+  }
+}
+.pur-but-one,
+.pur-but-two {
   display: block;
   margin: 50px auto;
   padding: 10px 40px;
@@ -216,6 +227,22 @@ footer {
   background: #03a9f4;
   color: #fff;
 }
+
+.pur-but-three,
+.pur-but-four {
+  border: unset;
+}
+
+.pur-but-three img,
+.pur-but-four img {
+  width: 250px;
+}
+
+.pur-but-three p,
+.pur-but-four p {
+  margin-top: 10px;
+}
+
 .home-right-list {
   list-style: none;
   margin-top: 20px;
@@ -262,4 +289,21 @@ footer {
     position: relative;
     top: 15px;
   }
+}
+.step {
+  display: none
+}
+.one > div > h4,
+.one > div > p,
+.two > div > p,
+.four > div > div > h4,
+.five > div > h4
+  {
+  font-size: 30px;
+
+}
+
+.five > div > h4 {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
