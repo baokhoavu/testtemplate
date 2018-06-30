@@ -1,1 +1,1 @@
-web: NODE_PATH=. node server.js
+web: npm build && npm start
