@@ -11,6 +11,9 @@ export default class purchase1 extends Component {
       this.addClass('Hiding');
 
     }
+    updateTextInput(val) {
+      // $('.input-field-five').val()=val;
+    }
 
     step1() {
       $('.two').removeClass('step');
@@ -72,71 +75,71 @@ export default class purchase1 extends Component {
           <div class="step two">
             <div class="center top-pad">
               <p>State property is located</p>
-                <select class="input-field-two">
-                  <option value="AL">Alabama</option>
-                  <option value="AK">Alaska</option>
-                  <option value="AZ">Arizona</option>
-                  <option value="AR">Arkansas</option>
-                  <option value="CA">California</option>
-                  <option value="CO">Colorado</option>
-                  <option value="CT">Connecticut</option>
-                  <option value="DE">Delaware</option>
-                  <option value="DC">District Of Columbia</option>
-                  <option value="FL">Florida</option>
-                  <option value="GA">Georgia</option>
-                  <option value="HI">Hawaii</option>
-                  <option value="ID">Idaho</option>
-                  <option value="IL">Illinois</option>
-                  <option value="IN">Indiana</option>
-                  <option value="IA">Iowa</option>
-                  <option value="KS">Kansas</option>
-                  <option value="KY">Kentucky</option>
-                  <option value="LA">Louisiana</option>
-                  <option value="ME">Maine</option>
-                  <option value="MD">Maryland</option>
-                  <option value="MA">Massachusetts</option>
-                  <option value="MI">Michigan</option>
-                  <option value="MN">Minnesota</option>
-                  <option value="MS">Mississippi</option>
-                  <option value="MO">Missouri</option>
-                  <option value="MT">Montana</option>
-                  <option value="NE">Nebraska</option>
-                  <option value="NV">Nevada</option>
-                  <option value="NH">New Hampshire</option>
-                  <option value="NJ">New Jersey</option>
-                  <option value="NM">New Mexico</option>
-                  <option value="NY">New York</option>
-                  <option value="NC">North Carolina</option>
-                  <option value="ND">North Dakota</option>
-                  <option value="OH">Ohio</option>
-                  <option value="OK">Oklahoma</option>
-                  <option value="OR">Oregon</option>
-                  <option value="PA">Pennsylvania</option>
-                  <option value="RI">Rhode Island</option>
-                  <option value="SC">South Carolina</option>
-                  <option value="SD">South Dakota</option>
-                  <option value="TN">Tennessee</option>
-                  <option value="TX">Texas</option>
-                  <option value="UT">Utah</option>
-                  <option value="VT">Vermont</option>
-                  <option value="VA">Virginia</option>
-                  <option value="WA">Washington</option>
-                  <option value="WV">West Virginia</option>
-                  <option value="WI">Wisconsin</option>
-                  <option value="WY">Wyoming</option>
-                </select>
-                <button onClick={this.step2} class="pur-but-two" type="submit">Continue</button>
+              <select class="input-field-two">
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+              <button onClick={this.step2} class="pur-but-two" type="submit">Continue</button>
             </div>
           </div>
           <div class="step three">
             <div class="center top-pad">
               <div>
                 <button onClick={this.step3} class="pur-but-three">
-                    <img class="image-clickable" src="../sass/images/fair.gif"></img>
+                    <img class="image-clickable" src="../sass/images/primary.gif"></img>
                     <p class="input-field-three">Primary</p>
                 </button>
                 <button onClick={this.step3} class="pur-but-three">
-                    <img class="image-clickable" src="../sass/images/excellent.gif"></img>
+                    <img class="image-clickable" src="../sass/images/rental.gif"></img>
                     <p class="input-field-three">Rental</p>
                 </button>
               </div>
@@ -147,19 +150,19 @@ export default class purchase1 extends Component {
               <div>
                 <h4>Type of property?</h4>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/fair.gif"></img>
+                    <img class="image-clickable" src="../sass/images/single.gif"></img>
                     <p class="input-field-four">Single Family</p>
                 </button>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/excellent.gif"></img>
+                    <img class="image-clickable" src="../sass/images/double.gif"></img>
                     <p class="input-field-four">2-4 Unit</p>
                 </button>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/fair.gif"></img>
+                    <img class="image-clickable" src="../sass/images/condo.gif"></img>
                     <p class="input-field-four">Condo/Townhouse</p>
                 </button>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/excellent.gif"></img>
+                    <img class="image-clickable" src="../sass/images/commercial.gif"></img>
                     <p class="input-field-four">Commercial</p>
                 </button>
               </div>
@@ -172,7 +175,7 @@ export default class purchase1 extends Component {
                 <span>$60k</span>
                 {/*<input type="range" min="60000" max="2000000" value="970000" class="slider" id="myRange input-field-five"/>*/}
                 <input type="range" id="start" name="volume"
-                  min="60000" max="2000000"/>
+                  min="60000" max="2000000" class="slider" id="myRange input-field-five" onchange="updateTextInput(this.value);"/>
                 <span>$2M+</span>
                 {/*<input type="range" min="6" max="200" value="10"/>*/}
               </div>
@@ -196,11 +199,11 @@ export default class purchase1 extends Component {
               <div>
                 <h4>How is your credit?</h4>
                 <button onClick={this.step7} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/fair.gif"></img>
+                    <img class="image-clickable" src="../sass/images/dontknow.gif"></img>
                     <p class="input-field-seven">Don't Know</p>
                 </button>
                 <button onClick={this.step7} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/excellent.gif"></img>
+                    <img class="image-clickable" src="../sass/images/poor.gif"></img>
                     <p class="input-field-seven">Poor</p>
                 </button>
                 <button onClick={this.step7} class="pur-but-seven">
@@ -208,7 +211,7 @@ export default class purchase1 extends Component {
                     <p class="input-field-seven">Fair</p>
                 </button>
                 <button onClick={this.step7} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/excellent.gif"></img>
+                    <img class="image-clickable" src="../sass/images/good.gif"></img>
                     <p class="input-field-seven">Good</p>
                 </button>
                 <button onClick={this.step7} class="pur-but-seven">
