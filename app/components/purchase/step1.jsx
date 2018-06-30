@@ -135,11 +135,11 @@ export default class purchase1 extends Component {
             <div class="center top-pad">
               <div>
                 <button onClick={this.step3} class="pur-but-three">
-                    <img class="image-clickable" src="../sass/images/primary.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Primary.gif"></img>
                     <p class="input-field-three">Primary</p>
                 </button>
                 <button onClick={this.step3} class="pur-but-three">
-                    <img class="image-clickable" src="../sass/images/rental.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Rental.gif"></img>
                     <p class="input-field-three">Rental</p>
                 </button>
               </div>
@@ -150,19 +150,19 @@ export default class purchase1 extends Component {
               <div>
                 <h4>Type of property?</h4>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/single.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Dingle.gif"></img>
                     <p class="input-field-four">Single Family</p>
                 </button>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/double.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Fouble.gif"></img>
                     <p class="input-field-four">2-4 Unit</p>
                 </button>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/condo.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Condo.gif"></img>
                     <p class="input-field-four">Condo/Townhouse</p>
                 </button>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/commercial.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Commercial.gif"></img>
                     <p class="input-field-four">Commercial</p>
                 </button>
               </div>
@@ -199,23 +199,23 @@ export default class purchase1 extends Component {
               <div>
                 <h4>How is your credit?</h4>
                 <button onClick={this.step7} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/dontknow.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Dontknow.gif"></img>
                     <p class="input-field-seven">Don't Know</p>
                 </button>
                 <button onClick={this.step7} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/poor.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Poor.gif"></img>
                     <p class="input-field-seven">Poor</p>
                 </button>
                 <button onClick={this.step7} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/fair.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Fair.gif"></img>
                     <p class="input-field-seven">Fair</p>
                 </button>
                 <button onClick={this.step7} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/good.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Good.gif"></img>
                     <p class="input-field-seven">Good</p>
                 </button>
                 <button onClick={this.step7} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/excellent.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Excellent.gif"></img>
                     <p class="input-field-seven">Excellent</p>
                 </button>
               </div>
