@@ -2,10 +2,12 @@
   "name": "reactjs-node-and-bootstrap-boilerplate",
   "version": "1.0.0",
   "description": "ReactJs, Node and Bootstrap boiler plate template to get started in making a website in ReactJs",
+  "homepage": "https://baokhoavu.github.io/testtemplate",
   "main": "server.js",
   "author": "Neil Redfern",
   "scripts": {
     "test": "",
+    "deploy": "gh-pages -d build",
     "start": "node server",
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors",
     "eslint": "eslint .",
