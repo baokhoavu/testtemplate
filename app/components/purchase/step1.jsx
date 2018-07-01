@@ -150,11 +150,11 @@ export default class purchase1 extends Component {
               <div>
                 <h4>Type of property?</h4>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/Dingle.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Single.gif"></img>
                     <p class="input-field-four">Single Family</p>
                 </button>
                 <button onClick={this.step4} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/Fouble.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Double.gif"></img>
                     <p class="input-field-four">2-4 Unit</p>
                 </button>
                 <button onClick={this.step4} class="pur-but-four">
