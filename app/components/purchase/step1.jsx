@@ -11,8 +11,11 @@ export default class purchase1 extends Component {
       this.addClass('Hiding');
 
     }
-    updateTextInput(val) {
-      // $('.input-field-five').val()=val;
+    updateTextInputOne() {
+      $('#range-val-one').text('$' + $('.input-field-five').val())
+    }
+    updateTextInputTwo() {
+      $('#range-val-two').text('$' + $('.input-field-six').val())
     }
 
     step1() {
@@ -172,12 +175,14 @@ export default class purchase1 extends Component {
             <div class="center top-pad">
               <h4>Approximate purchase price</h4>
               <div class="slidecontainer">
+                <div>
+                  <span id="range-val-one">$60000
+                  </span>
+                </div>
                 <span>$60k</span>
-                {/*<input type="range" min="60000" max="2000000" value="970000" class="slider" id="myRange input-field-five"/>*/}
                 <input type="range" id="start" name="volume"
-                  min="60000" max="2000000" class="slider" id="myRange input-field-five" onchange="updateTextInput(this.value);"/>
+                  min="60000" max="2000000" class="slider input-field-five" id="myRange" onChange={this.updateTextInputOne}/>
                 <span>$2M+</span>
-                {/*<input type="range" min="6" max="200" value="10"/>*/}
               </div>
               <button onClick={this.step5} class="pur-but-five" type="submit">Continue</button>
             </div>
@@ -186,8 +191,12 @@ export default class purchase1 extends Component {
             <div class="center top-pad">
               <h4>Amount for down payment</h4>
               <div class="slidecontainer">
+                <div>
+                  <span id="range-val-two">$60000
+                  </span>
+                </div>
                 <span>$60k</span>
-                <input type="range" min="60000" max="2000000" value="970000" class="slider" id="myRange input-field-six"/>
+                <input type="range" min="60000" max="2000000" class="slider input-field-six" id="myRange" onChange={this.updateTextInputTwo}/>
                 <span>$2M+</span>
                 {/*<input type="range" min="6" max="200" value="10"/>*/}
               </div>
