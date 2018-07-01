@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -35,7 +36,10 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'app/sass/images', to: 'sass/images' }
+    ])
   ],
   module: {
     loaders: [{
@@ -55,7 +59,7 @@ module.exports = {
     {
       test: /\.(gif|png|jpe?g|svg|webp)$/i,
       loaders: [
-        'file-loader?hash=sha512&digest=hex&name=sass/images/[hash].[ext]',
+        'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
         'image-webpack-loader'
       ]
     }]

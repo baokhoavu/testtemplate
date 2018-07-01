@@ -3,6 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -26,7 +27,10 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'app/sass/images', to: 'sass/images' }
+    ])
   ],
   module: {
     loaders: [{
@@ -46,7 +50,7 @@ module.exports = {
     {
       test: /\.(gif|png|jpe?g|svg|webp)$/i,
       loaders: [
-        'file-loader?hash=sha512&digest=hex&name=sass/images/[hash].[ext]',
+        'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
         'image-webpack-loader'
       ]
     },
