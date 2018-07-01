@@ -55,7 +55,7 @@ module.exports = {
     {
       test: /\.(gif|png|jpe?g|svg|webp)$/i,
       loaders: [
-        'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+        'file-loader?hash=sha512&digest=hex&name=sass/images/[hash].[ext]',
         'image-webpack-loader'
       ]
     }]
