@@ -17,6 +17,12 @@ export default class purchase1 extends Component {
     updateTextInputTwo() {
       $('#range-val-two').text('$' + $('.input-field-six').val())
     }
+    updateRangeOne() {
+      $('.input-field-five').val($('#range-val-one').text())
+    }
+    updateRangeTwo() {
+      $('.input-field-six').val($('#range-val-two').text())
+    }
 
     step1() {
       $('.two').removeClass('step');
@@ -61,7 +67,7 @@ export default class purchase1 extends Component {
     step9() {
       $('.ten').removeClass('step');
       $('.nine').addClass('step');
-      window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + $('.input-field-one.val()') + '&body=Name: ' + $('.input-field-one.val()') + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + $('.input-field-three').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four').text() + '%0D%0A' + 'Approximate purchase price: ' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + $('.input-field-six').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight;').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
+      window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + $('.input-field-three').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four').text() + '%0D%0A' + 'Approximate purchase price: ' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + $('.input-field-six').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
     }
 
   	render() {
@@ -176,7 +182,7 @@ export default class purchase1 extends Component {
               <h4>Approximate purchase price</h4>
               <div class="slidecontainer">
                 <div>
-                  <span id="range-val-one">$60000
+                  <span id="range-val-one" onChange={this.updateRangeOne}>$60000
                   </span>
                 </div>
                 <span>$60k</span>
@@ -192,7 +198,7 @@ export default class purchase1 extends Component {
               <h4>Amount for down payment</h4>
               <div class="slidecontainer">
                 <div>
-                  <span id="range-val-two">$60000
+                  <span id="range-val-two" onChange={this.updateRangeTwo}>$60000
                   </span>
                 </div>
                 <span>$60k</span>

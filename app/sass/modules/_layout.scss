@@ -222,6 +222,18 @@ footer {
   .two > div > select {
     width: 75%;
   }
+  .home-right-list{
+    padding-left: 0;
+  }
+  .footer-row {
+    width: unset;
+  }
+  .two > div > select {
+    width: 100% !important;
+  }
+  input[type=range] {
+    width: 60% !important;
+  }
 }
 .pur-but-one,
 .pur-but-two,
@@ -317,6 +329,12 @@ footer {
   font-size: 30px;
 }
 
+.home-button button {
+  display: block;
+  margin: 0 auto;
+  border: unset;
+  background: #f5f5f5;
+}
 
 .two > div > select {
   font-size: 30px;
