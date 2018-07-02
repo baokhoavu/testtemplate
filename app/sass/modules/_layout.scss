@@ -216,6 +216,12 @@ footer {
   border: 1px solid black;
 }
 @media screen and (max-width:400px) {
+  #container {
+    padding-bottom: 20px;
+  }
+  .top-title {
+    margin-bottom: 0 !important;
+  }
   .input-bar {
     min-width: 250px;
   }
@@ -227,6 +233,7 @@ footer {
   }
   .footer-row {
     width: unset;
+    font-size: 12px;
   }
   .two > div > select {
     width: 100% !important;
@@ -234,7 +241,32 @@ footer {
   input[type=range] {
     width: 60% !important;
   }
+  .home-mid-row>p:nth-of-type(-n+2) {
+    font-size: 19px;
+  }
+  .home-mid-row > p:nth-of-type(3) {
+    margin-top: 35px;
+    font-size: 15px;
+  }
+  .image-clickable {
+    width: 180px;
+  }
+  .home-mid-row > form > button > p {
+    font-size: 20px;
+  }
+  .grey-box {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .grey-box ul {
+    top: unset;
+  }
+  .home-right-list li {
+    font-size: 13px !important;
+    line-height: 25px !important;
+  }
 }
+
 .pur-but-one,
 .pur-but-two,
 .pur-but-five,
