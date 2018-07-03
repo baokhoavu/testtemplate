@@ -272,7 +272,10 @@ footer {
 .pur-but-five,
 .pur-but-six,
 .pur-but-eight,
-.pur-but-nine {
+.pur-but-nine,
+.pur-but-eleven,
+.pur-but-twelve
+ {
   display: block;
   margin: 50px auto;
   padding: 10px 40px;
@@ -356,7 +359,9 @@ footer {
 .five > div > h4,
 .six > div > h4,
 .eight > div > p,
-.nine > div > p
+.nine > div > p,
+.eleven > div > h4,
+.twelve > div > p
   {
   font-size: 30px;
 }
@@ -390,7 +395,8 @@ footer {
 }
 
 .five > div > h4,
-.six > div > h4
+.six > div > h4,
+.eleven > div > h4,
  {
   margin-top: 50px;
   margin-bottom: 50px;
