@@ -401,7 +401,9 @@ footer {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
+.Logo {
+  width: 300px;
+}
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;
@@ -419,6 +421,12 @@ input[type=range]::-webkit-slider-runnable-track {
   background: #3071a9;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
+}
+img:hover {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
 }
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;

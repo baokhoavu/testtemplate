@@ -16,11 +16,17 @@ export default class refinance1 extends Component {
     updateTextInputTwo() {
       $('#range-val-two').text('$' + $('.input-field-six').val())
     }
+    updateTextInputThree() {
+      $('#range-val-three').text('$' + $('.input-field-eleven').val())
+    }
     updateRangeOne() {
       $('.input-field-five').val($('#range-val-one').text())
     }
     updateRangeTwo() {
       $('.input-field-six').val($('#range-val-two').text())
+    }
+    updateRangeTwo() {
+      $('.input-field-eleven').val($('#range-val-three').text())
     }
 
     step1() {
@@ -40,38 +46,31 @@ export default class refinance1 extends Component {
       $('.four').removeClass('step');
       $('.three').addClass('step');
       $('.input-field-three-a').addClass('active');
-      // console.log($('.input-field-three-a.active').text())
     }
     step3b() {
       $('.four').removeClass('step');
       $('.three').addClass('step');
       $('.input-field-three-b').addClass('active');
-      // console.log($('.input-field-three-b').text();
     }
     step4a() {
       $('.five').removeClass('step');
       $('.four').addClass('step');
-      console.log($('.input-field-three-b .active'))
-      // console.log($('.input-field-four-a').text());
-      let inputFourA = $('.input-field-four-a').text();
+      $('.input-field-four-a').addClass('active');
     }
     step4b() {
       $('.five').removeClass('step');
       $('.four').addClass('step');
-      // console.log($('.input-field-four-b').text());
-      let inputFourB = $('.input-field-four-b').text();
+      $('.input-field-four-b').addClass('active');
     }
     step4c() {
       $('.five').removeClass('step');
       $('.four').addClass('step');
-      // console.log($('.input-field-four-c').text());
-      let inputFourC = $('.input-field-four-c').text();
+      $('.input-field-four-c').addClass('active');
     }
     step4d() {
       $('.five').removeClass('step');
       $('.four').addClass('step');
-      // console.log($('.input-field-four-d').text());
-      let inputFourD = $('.input-field-four-d').text();
+      $('.input-field-four-d').addClass('active');
     }
     step5() {
       $('.six').removeClass('step');
@@ -86,53 +85,47 @@ export default class refinance1 extends Component {
     step11() {
       $('.twelve').removeClass('step');
       $('.eleven').addClass('step');
-      console.log($('.input-field-six').val());
+      console.log($('.input-field-eleven').val());
     }
     step12() {
       $('.seven').removeClass('step');
       $('.twelve').addClass('step');
-      console.log($('.input-field-six').val());
+      console.log($('.input-field-twelve').text());
     }
     step7a() {
       $('.eight').removeClass('step');
       $('.seven').addClass('step');
-      // console.log($('.input-field-seven').text());
-      let inputSevenA = $('.input-field-seven-a').text();
+      $('.input-field-seven-a').addClass('active');
     }
     step7b() {
       $('.eight').removeClass('step');
       $('.seven').addClass('step');
-      // console.log($('.input-field-seven').text());
-      let inputSevenB = $('.input-field-seven-b').text();
+      $('.input-field-seven-b').addClass('active');
     }
     step7c() {
       $('.eight').removeClass('step');
       $('.seven').addClass('step');
-      // console.log($('.input-field-seven').text());
-      let inputSevenC = $('.input-field-seven-c').text();
+      $('.input-field-seven-c').addClass('active');
     }
     step7d() {
       $('.eight').removeClass('step');
       $('.seven').addClass('step');
-      // console.log($('.input-field-seven').text());
-      let inputSevenD = $('.input-field-seven-d').text();
+      $('.input-field-seven-d').addClass('active');
     }
     step7e() {
       $('.eight').removeClass('step');
       $('.seven').addClass('step');
-      // console.log($('.input-field-seven').text());
-      let inputSevenE = $('.input-field-seven-e').text();
+      $('.input-field-seven-e').addClass('active');
     }
     step8() {
       $('.nine').removeClass('step');
       $('.eight').addClass('step');
-      console.log($('.input-field-eight;').val());
     }
     step9() {
       $('.ten').removeClass('step');
       $('.nine').addClass('step');
-      window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State: ' + $('.input-field-two').val() + '%0D%0A' + 'Type: ' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four').text() + '%0D%0A' + 'Approximate purchase price: ' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + $('.input-field-six').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
-      // window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + $('.input-field-three').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four').text() + '%0D%0A' + 'Approximate purchase price: ' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + $('.input-field-six').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
+      // window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State: ' + $('.input-field-two').val() + '%0D%0A' + 'Type: ' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text()'%0D%0A' + 'Approximate purchase price: ' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + $('.input-field-six').val() + '%0D%0A' + 'How much cash would you like: ' + $('.input-field-six').val() + '%0D%0A' + 'Property Zip Code: ' + $('.input-field-eight').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
+      window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + 'HomeRateLoan Customer: ' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text() + '%0D%0A' + 'Approximate purchase price: ' + '$' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + '$' + $('.input-field-six').val() + '%0D%0A' +  'How much cash would you like?: ' + '$' + $('.input-field-eleven').val() + '%0D%0A' + 'Property Zip Code: ' + $('.input-field-twelve').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number: ' + $('.input-field-nine').val()
     }
 
     render() {
@@ -279,11 +272,11 @@ export default class refinance1 extends Component {
               <h4>How much cash would you like?</h4>
               <div class="slidecontainer">
                 <div>
-                  <span id="range-val-two" onChange={this.updateRangeTwo}>$60000
+                  <span id="range-val-three" onChange={this.updateRangeThree}>$60000
                   </span>
                 </div>
                 <span>$60k</span>
-                <input type="range" min="60000" max="2000000" class="slider input-field-six" id="myRange" onChange={this.updateTextInputTwo}/>
+                <input type="range" min="60000" max="2000000" class="slider input-field-eleven" id="myRange" onChange={this.updateTextInputThree}/>
                 <span>$2M+</span>
                 {/*<input type="range" min="6" max="200" value="10"/>*/}
               </div>
@@ -293,7 +286,7 @@ export default class refinance1 extends Component {
           <div class="step twelve">
             <div class="center top-pad">
               <p>Property Zip Code</p>
-              <input class="input-bar input-field-eight" type="text"/>
+              <input class="input-bar input-field-twelve" type="text"/>
               <button onClick={this.step12} class="pur-but-twelve" type="submit">Continue</button>
             </div>
           </div>

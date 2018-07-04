@@ -34,15 +34,35 @@ export default class purchase1 extends Component {
       $('.two').addClass('step');
       console.log($('.input-field-two').val());
     }
-    step3() {
+    step3a() {
       $('.four').removeClass('step');
       $('.three').addClass('step');
-      console.log($('.input-field-three').text())
+      $('.input-field-three-a').addClass('active');
     }
-    step4() {
+    step3b() {
+      $('.four').removeClass('step');
+      $('.three').addClass('step');
+      $('.input-field-three-b').addClass('active');
+    }
+    step4a() {
       $('.five').removeClass('step');
       $('.four').addClass('step');
-      console.log($('.input-field-four').text());
+      $('.input-field-four-a').addClass('active');
+    }
+    step4b() {
+      $('.five').removeClass('step');
+      $('.four').addClass('step');
+      $('.input-field-four-b').addClass('active');
+    }
+    step4c() {
+      $('.five').removeClass('step');
+      $('.four').addClass('step');
+      $('.input-field-four-c').addClass('active');
+    }
+    step4d() {
+      $('.five').removeClass('step');
+      $('.four').addClass('step');
+      $('.input-field-four-d').addClass('active');
     }
     step5() {
       $('.six').removeClass('step');
@@ -54,10 +74,30 @@ export default class purchase1 extends Component {
       $('.six').addClass('step');
       console.log($('.input-field-six').val());
     }
-    step7() {
+    step7a() {
       $('.eight').removeClass('step');
       $('.seven').addClass('step');
-      console.log($('.input-field-seven').text());
+      $('.input-field-seven-a').addClass('active');
+    }
+    step7b() {
+      $('.eight').removeClass('step');
+      $('.seven').addClass('step');
+      $('.input-field-seven-b').addClass('active');
+    }
+    step7c() {
+      $('.eight').removeClass('step');
+      $('.seven').addClass('step');
+      $('.input-field-seven-c').addClass('active');
+    }
+    step7d() {
+      $('.eight').removeClass('step');
+      $('.seven').addClass('step');
+      $('.input-field-seven-d').addClass('active');
+    }
+    step7e() {
+      $('.eight').removeClass('step');
+      $('.seven').addClass('step');
+      $('.input-field-seven-e').addClass('active');
     }
     step8() {
       $('.nine').removeClass('step');
@@ -67,7 +107,7 @@ export default class purchase1 extends Component {
     step9() {
       $('.ten').removeClass('step');
       $('.nine').addClass('step');
-      window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + $('.input-field-three').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four').text() + '%0D%0A' + 'Approximate purchase price: ' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + $('.input-field-six').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
+      window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + 'HomeRateLoan Customer: ' +  $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + 'Type: ' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text() + '%0D%0A' + 'Approximate purchase price: ' + '$' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + '$' + $('.input-field-six').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
     }
 
   	render() {
@@ -143,13 +183,13 @@ export default class purchase1 extends Component {
           <div class="step three">
             <div class="center top-pad">
               <div>
-                <button onClick={this.step3} class="pur-but-three">
+                <button onClick={this.step3a} class="pur-but-three">
                     <img class="image-clickable" src="../sass/images/Primary.gif"></img>
-                    <p class="input-field-three">Primary</p>
+                    <p class="input-field-three-a">Primary</p>
                 </button>
-                <button onClick={this.step3} class="pur-but-three">
+                <button onClick={this.step3b} class="pur-but-three">
                     <img class="image-clickable" src="../sass/images/Rental.gif"></img>
-                    <p class="input-field-three">Rental</p>
+                    <p class="input-field-three-b">Rental</p>
                 </button>
               </div>
             </div>
@@ -158,21 +198,21 @@ export default class purchase1 extends Component {
             <div class="center top-pad">
               <div>
                 <h4>Type of property?</h4>
-                <button onClick={this.step4} class="pur-but-four">
+                <button onClick={this.step4a} class="pur-but-four">
                     <img class="image-clickable" src="../sass/images/Single.gif"></img>
-                    <p class="input-field-four">Single Family</p>
+                    <p class="input-field-four-a">Single Family</p>
                 </button>
-                <button onClick={this.step4} class="pur-but-four">
+                <button onClick={this.step4b} class="pur-but-four">
                     <img class="image-clickable" src="../sass/images/Double.gif"></img>
-                    <p class="input-field-four">2-4 Unit</p>
+                    <p class="input-field-four-b">2-4 Unit</p>
                 </button>
-                <button onClick={this.step4} class="pur-but-four">
+                <button onClick={this.step4c} class="pur-but-four">
                     <img class="image-clickable" src="../sass/images/Condo.gif"></img>
-                    <p class="input-field-four">Condo/Townhouse</p>
+                    <p class="input-field-four-c">Condo/Townhouse</p>
                 </button>
-                <button onClick={this.step4} class="pur-but-four">
+                <button onClick={this.step4d} class="pur-but-four">
                     <img class="image-clickable" src="../sass/images/Commercial.gif"></img>
-                    <p class="input-field-four">Commercial</p>
+                    <p class="input-field-four-d">Commercial</p>
                 </button>
               </div>
             </div>
@@ -213,23 +253,23 @@ export default class purchase1 extends Component {
             <div class="center top-pad">
               <div>
                 <h4>How is your credit?</h4>
-                <button onClick={this.step7} class="pur-but-seven">
+                <button onClick={this.step7a} class="pur-but-seven">
                     <img class="image-clickable" src="../sass/images/Dontknow.gif"></img>
-                    <p class="input-field-seven">Don't Know</p>
+                    <p class="input-field-seven-a">Don't Know</p>
                 </button>
-                <button onClick={this.step7} class="pur-but-seven">
+                <button onClick={this.step7b} class="pur-but-seven">
                     <img class="image-clickable" src="../sass/images/Poor.gif"></img>
-                    <p class="input-field-seven">Poor</p>
+                    <p class="input-field-seven-b">Poor</p>
                 </button>
-                <button onClick={this.step7} class="pur-but-seven">
+                <button onClick={this.step7c} class="pur-but-seven">
                     <img class="image-clickable" src="../sass/images/Fair.gif"></img>
-                    <p class="input-field-seven">Fair</p>
+                    <p class="input-field-seven-c">Fair</p>
                 </button>
-                <button onClick={this.step7} class="pur-but-seven">
+                <button onClick={this.step7d} class="pur-but-seven">
                     <img class="image-clickable" src="../sass/images/Good.gif"></img>
-                    <p class="input-field-seven">Good</p>
+                    <p class="input-field-seven-d">Good</p>
                 </button>
-                <button onClick={this.step7} class="pur-but-seven">
+                <button onClick={this.step7e} class="pur-but-seven">
                     <img class="image-clickable" src="../sass/images/Excellent.gif"></img>
                     <p class="input-field-seven">Excellent</p>
                 </button>
