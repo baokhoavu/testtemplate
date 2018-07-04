@@ -450,23 +450,23 @@ input[type=range]:focus::-ms-fill-upper {
 }
 @media screen and (max-width:400px) {
   #container {
-    padding-bottom: 20px;
+    padding-bottom: 20px !important;
   }
   .top-title {
     margin-bottom: 0 !important;
   }
   .input-bar {
-    min-width: 250px;
+    min-width: 250px !important;
   }
   .two > div > select {
-    width: 75%;
+    width: 75% !important;
   }
   .home-right-list{
-    padding-left: 0;
+    padding-left: 0 !important;
   }
   .footer-row {
-    width: unset;
-    font-size: 12px;
+    width: unset !important;
+    font-size: 12px !important;
   }
   .two > div > select {
     width: 100% !important;
@@ -475,24 +475,24 @@ input[type=range]:focus::-ms-fill-upper {
     width: 60% !important;
   }
   .home-mid-row>p:nth-of-type(-n+2) {
-    font-size: 19px;
+    font-size: 19px !important;
   }
   .home-mid-row > p:nth-of-type(3) {
-    margin-top: 35px;
-    font-size: 15px;
+    margin-top: 35px !important;
+    font-size: 15px !important;
   }
   .image-clickable {
-    width: 180px;
+    width: 180px !important;
   }
   .home-mid-row > form > button > p {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .grey-box {
-    padding: 10px;
-    font-size: 12px;
+    padding: 10px !important;
+    font-size: 12px !important;
   }
   .grey-box ul {
-    top: unset;
+    top: unset !important;
   }
   .home-right-list li {
     font-size: 13px !important;
