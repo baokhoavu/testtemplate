@@ -454,19 +454,21 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
-// @media only screen and (max-width: 400px) {
-//   .footer-row {
-//     width: unset !important;
-//     font-size: 12px !important;
-//   }
-// }
+@media only screen and (max-width: 400px) {
+  .footer-row {
+    width: unset !important;
+    font-size: 12px !important;
+    color: green;
+  }
+}
 
-// @media (max-width: 400px) {
-//   .footer-row {
-//     width: unset !important;
-//     font-size: 12px !important;
-//   }
-// }
+@media (max-width: 400px) {
+  .footer-row {
+    width: unset !important;
+    font-size: 12px !important;
+    color: blue;
+  }
+}
 @media (max-width: 400px) {
   #container {
     padding-bottom: 20px !important;
@@ -486,6 +488,7 @@ input[type=range]:focus::-ms-fill-upper {
   .footer-row {
     width: unset !important;
     font-size: 12px !important;
+    color: red;
   }
   .two > div > select {
     width: 100% !important;
