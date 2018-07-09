@@ -454,22 +454,23 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
-@media only screen and (max-width: 400px) {
-  .footer-row {
-    width: unset !important;
-    font-size: 12px !important;
-    color: green;
-  }
-}
+// @media only screen and (max-width: 400px) {
+//   .footer-row {
+//     width: unset !important;
+//     font-size: 12px !important;
+//     color: green;
+//   }
+// }
 
-@media (max-width: 400px) {
-  .footer-row {
-    width: unset !important;
-    font-size: 12px !important;
-    color: blue;
-  }
-}
-@media (max-width: 400px) {
+// @media (max-width: 400px) {
+//   .footer-row {
+//     width: unset !important;
+//     font-size: 12px !important;
+//     color: blue;
+//   }
+// }
+// @media (max-width: 400px) {
+@media #{$mobile} {
   #container {
     padding-bottom: 20px !important;
   }
