@@ -276,6 +276,9 @@ footer {
   text-align: center;
   font-size: 25px;
 }
+.footer-row {
+  font-size: 12px;
+}
 .footer-row>p {
   text-align: center;
 }
@@ -315,7 +318,10 @@ footer {
   {
   font-size: 30px;
 }
-
+.home-button {
+  margin-top: 45px;
+  margin-bottom: -10px;
+}
 .home-button button {
   display: block;
   margin: 0 auto;
@@ -449,6 +455,19 @@ input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
 @media only screen and (max-width: 400px) {
+  .footer-row {
+    width: unset !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-row {
+    width: unset !important;
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 400px) {
   #container {
     padding-bottom: 20px !important;
   }
