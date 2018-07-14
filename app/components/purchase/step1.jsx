@@ -12,16 +12,32 @@ export default class purchase1 extends Component {
 
     }
     updateTextInputOne() {
-      $('#range-val-one').text('$' + $('.input-field-five').val())
+      const r1 = $('.input-field-five').val();
+      const r2 = r1.toString();
+      const r3 = r2 - 10000;
+      const r4 = r2 - -15000;
+      $('#range-val-one').text('$' + r3 );
+      $('#range-val-oneb').text('$' + r4 );
     }
     updateTextInputTwo() {
-      $('#range-val-two').text('$' + $('.input-field-six').val())
+      const r1 = $('.input-field-six').val();
+      const r2 = r1.toString();
+      const r3 = r2 - 10000;
+      const r4 = r2 - -15000;
+      $('#range-val-two').text('$' + r3 );
+      $('#range-val-twob').text('$' + r4 );
     }
     updateRangeOne() {
       $('.input-field-five').val($('#range-val-one').text())
     }
+    updateRangeOneb() {
+      $('.input-field-five').val($('#range-val-oneb').text())
+    }
     updateRangeTwo() {
       $('.input-field-six').val($('#range-val-two').text())
+    }
+    updateRangeTwo() {
+      $('.input-field-six').val($('#range-val-twob').text())
     }
 
     step1() {
@@ -102,12 +118,44 @@ export default class purchase1 extends Component {
     step8() {
       $('.nine').removeClass('step');
       $('.eight').addClass('step');
-      console.log($('.input-field-eight;').val());
+      console.log($('.input-field-eight').val());
     }
     step9() {
       $('.ten').removeClass('step');
       $('.nine').addClass('step');
-      window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + 'HomeRateLoan Customer: ' +  $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + 'Type: ' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text() + '%0D%0A' + 'Approximate purchase price: ' + '$' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + '$' + $('.input-field-six').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
+
+      const name = $('.input-field-one').val();
+      const state = $('.input-field-two').val();
+      const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
+      const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
+      const price = $('.input-field-five').val();
+      const downpay = $('.input-field-six').val();
+      const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
+      const email = $('.input-field-eight').val();
+      const phone = $('.input-field-nine').val();
+
+      $.ajax({
+        url: "./././mail/mailPurchase.php",
+        method: "POST",
+        data: {
+          name: name,
+          state: state,
+          renttype: renttype,
+          proptype: proptype,
+          price: price,
+          downpay: downpay,
+          credit: credit,
+          email: email,
+          phone: phone
+        },
+        success: function() {
+          console.log('success')
+        },
+        dataType: "json",
+        error: function(req, err){ console.log('my message' + err); }
+      });
+
+      // window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + 'HomeRateLoan Customer: ' +  $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + 'Type: ' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text() + '%0D%0A' + 'Approximate purchase price: ' + '$' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + '$' + $('.input-field-six').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
     }
 
   	render() {
@@ -184,11 +232,11 @@ export default class purchase1 extends Component {
             <div class="center top-pad">
               <div>
                 <button onClick={this.step3a} class="pur-but-three">
-                    <img class="image-clickable" src="../sass/images/Primary.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Primary.png"></img>
                     <p class="input-field-three-a">Primary</p>
                 </button>
                 <button onClick={this.step3b} class="pur-but-three">
-                    <img class="image-clickable" src="../sass/images/Rental.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Rental.png"></img>
                     <p class="input-field-three-b">Rental</p>
                 </button>
               </div>
@@ -199,11 +247,11 @@ export default class purchase1 extends Component {
               <div>
                 <h4>Type of property?</h4>
                 <button onClick={this.step4a} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/Single.gif"></img>
+                    <img class="image-clickable" src="../sass/images/SingleHouse.png"></img>
                     <p class="input-field-four-a">Single Family</p>
                 </button>
                 <button onClick={this.step4b} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/Double.gif"></img>
+                    <img class="image-clickable" src="../sass/images/2-4unit.png"></img>
                     <p class="input-field-four-b">2-4 Unit</p>
                 </button>
                 <button onClick={this.step4c} class="pur-but-four">
@@ -211,7 +259,7 @@ export default class purchase1 extends Component {
                     <p class="input-field-four-c">Condo/Townhouse</p>
                 </button>
                 <button onClick={this.step4d} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/Commercial.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Business.png"></img>
                     <p class="input-field-four-d">Commercial</p>
                 </button>
               </div>
@@ -222,7 +270,10 @@ export default class purchase1 extends Component {
               <h4>Approximate purchase price</h4>
               <div class="slidecontainer">
                 <div>
-                  <span id="range-val-one" onChange={this.updateRangeOne}>$60000
+                  <span id="range-val-one" class="left" onChange={this.updateRangeOne}>$50000
+                  </span>
+                  <span> to </span>
+                  <span id="range-val-oneb" class="right" onChange={this.updateRangeOneb}>$70000
                   </span>
                 </div>
                 <span>$60k</span>
@@ -238,7 +289,10 @@ export default class purchase1 extends Component {
               <h4>Amount for down payment</h4>
               <div class="slidecontainer">
                 <div>
-                  <span id="range-val-two" onChange={this.updateRangeTwo}>$60000
+                  <span id="range-val-two" class="left" onChange={this.updateRangeTwo}>$50000
+                  </span>
+                  <span> to </span>
+                  <span id="range-val-twob" class="right" onChange={this.updateRangeTwob}>$70000
                   </span>
                 </div>
                 <span>$60k</span>
@@ -254,23 +308,23 @@ export default class purchase1 extends Component {
               <div>
                 <h4>How is your credit?</h4>
                 <button onClick={this.step7a} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Dontknow.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Dontknow.png"></img>
                     <p class="input-field-seven-a">Don't Know</p>
                 </button>
                 <button onClick={this.step7b} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Poor.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Poor.png"></img>
                     <p class="input-field-seven-b">Poor</p>
                 </button>
                 <button onClick={this.step7c} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Fair.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Fair.png"></img>
                     <p class="input-field-seven-c">Fair</p>
                 </button>
                 <button onClick={this.step7d} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Good.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Good.png"></img>
                     <p class="input-field-seven-d">Good</p>
                 </button>
                 <button onClick={this.step7e} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Excellent.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Excellent.png"></img>
                     <p class="input-field-seven">Excellent</p>
                 </button>
               </div>

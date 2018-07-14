@@ -44,19 +44,19 @@ export default class Home extends Component {
                             <p>Please choose an option below to start</p>
                             <form action="./refinance/step1">
                                 <button class="button">
-                                    <img class="image-clickable" src="../sass/images/Refinance.gif"></img>
+                                    <img class="image-clickable" src="../sass/images/refinance.png"></img>
                                     <p>Refinance</p>
                                 </button>
                             </form>
                             <form action="./purchase/step1">
                             <button class="button">
-                                <img class="image-clickable" src="../sass/images/Purchase.gif"></img>
+                                <img class="image-clickable" src="../sass/images/Purchase.png"></img>
                                 <p>Purchase</p>
                             </button>
                             </form>
                             <form action="./refinance/step1">
                             <button class="button">
-                                <img class="image-clickable" src="../sass/images/Cashout.gif"></img>
+                                <img class="image-clickable" src="../sass/images/Cashout-01.png"></img>
                                 <p>Cash Out Refinance</p>
                             </button>
                             </form>

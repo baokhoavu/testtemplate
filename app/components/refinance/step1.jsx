@@ -125,16 +125,34 @@ export default class refinance1 extends Component {
       $('.ten').removeClass('step');
       $('.nine').addClass('step');
 
+      const name = $('.input-field-one').val();
+      const state = $('.input-field-two').val();
+      const renttype = $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text();
+      const proptype = $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text();
+      const curloan = $('.input-field-five').val();
+      const propval = $('.input-field-six').val();
+      const credit = $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text();
+      const email = $('.input-field-eight').val();
+      const phone = $('.input-field-nine').val();
+
       $.ajax({
-        url: "https://formspree.io/tealkrysta92@gmail.com",
+        url: "../../mailRefinance.php",
         method: "POST",
         data: {
-          name: $('.input-field-one').val(),
-          name: $('.input-field-one').val(),
-          name: $('.input-field-one').val(),
-          name: $('.input-field-one').val()
+          name: name,
+          state: state,
+          renttype: renttype,
+          proptype: proptype,
+          curloan: curloan,
+          propval: propval,
+          reqmoney: reqmoney,
+          propzip: propzip,
+          credit: credit,
+          email: email,
+          phone: phone
         },
-        dataType: "json"
+        dataType: "json",
+        error: function(req, err){ console.log('my message' + err); }
       });
       // window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State: ' + $('.input-field-two').val() + '%0D%0A' + 'Type: ' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text()'%0D%0A' + 'Approximate purchase price: ' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + $('.input-field-six').val() + '%0D%0A' + 'How much cash would you like: ' + $('.input-field-six').val() + '%0D%0A' + 'Property Zip Code: ' + $('.input-field-eight').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
       // window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + 'HomeRateLoan Customer: ' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State:' + $('.input-field-two').val() + '%0D%0A' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text() + '%0D%0A' + 'Approximate purchase price: ' + '$' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + '$' + $('.input-field-six').val() + '%0D%0A' +  'How much cash would you like?: ' + '$' + $('.input-field-eleven').val() + '%0D%0A' + 'Property Zip Code: ' + $('.input-field-twelve').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven-a.active').text() + $('.input-field-seven-b.active').text() + $('.input-field-seven-c.active').text() + $('.input-field-seven-d.active').text() + $('.input-field-seven-e.active').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number: ' + $('.input-field-nine').val()
@@ -214,11 +232,11 @@ export default class refinance1 extends Component {
             <div class="center top-pad">
               <div>
                 <button onClick={this.step3a} class="pur-but-three">
-                    <img class="image-clickable" src="../sass/images/Primary.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Primary.png"></img>
                     <p class="input-field-three-a">Primary</p>
                 </button>
                 <button onClick={this.step3b} class="pur-but-three">
-                    <img class="image-clickable" src="../sass/images/Rental.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Rental.png"></img>
                     <p class="input-field-three">Rental</p>
                 </button>
               </div>
@@ -229,11 +247,11 @@ export default class refinance1 extends Component {
               <div>
                 <h4>Type of property?</h4>
                 <button onClick={this.step4a} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/Single.gif"></img>
+                    <img class="image-clickable" src="../sass/images/SingleHouse.png"></img>
                     <p class="input-field-four-a">Single Family</p>
                 </button>
                 <button onClick={this.step4b} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/Double.gif"></img>
+                    <img class="image-clickable" src="../sass/images/2-4unit.png"></img>
                     <p class="input-field-four-b">2-4 Unit</p>
                 </button>
                 <button onClick={this.step4c} class="pur-but-four">
@@ -241,7 +259,7 @@ export default class refinance1 extends Component {
                     <p class="input-field-four-c">Condo/Townhouse</p>
                 </button>
                 <button onClick={this.step4d} class="pur-but-four">
-                    <img class="image-clickable" src="../sass/images/Commercial.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Business.png"></img>
                     <p class="input-field-four-d">Commercial</p>
                 </button>
               </div>
@@ -307,23 +325,23 @@ export default class refinance1 extends Component {
               <div>
                 <h4>How is your credit?</h4>
                 <button onClick={this.step7a} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Dontknow.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Dontknow.png"></img>
                     <p class="input-field-seven-a">Don't Know</p>
                 </button>
                 <button onClick={this.step7b} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Poor.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Poor.png"></img>
                     <p class="input-field-seven-b">Poor</p>
                 </button>
                 <button onClick={this.step7c} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Fair.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Fair.png"></img>
                     <p class="input-field-seven-c">Fair</p>
                 </button>
                 <button onClick={this.step7d} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Good.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Good.png"></img>
                     <p class="input-field-seven-d">Good</p>
                 </button>
                 <button onClick={this.step7e} class="pur-but-seven">
-                    <img class="image-clickable" src="../sass/images/Excellent.gif"></img>
+                    <img class="image-clickable" src="../sass/images/Excellent.png"></img>
                     <p class="input-field-seven">Excellent</p>
                 </button>
               </div>
