@@ -39,6 +39,9 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: 'app/sass/images', to: 'sass/images' }
+    ]),
+    new CopyWebpackPlugin([
+      { from: 'app/src', to: 'src' }
     ])
   ],
   module: {
