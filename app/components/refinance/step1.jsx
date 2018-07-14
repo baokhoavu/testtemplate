@@ -11,13 +11,28 @@ export default class refinance1 extends Component {
 
     }
     updateTextInputOne() {
-      $('#range-val-one').text('$' + $('.input-field-five').val())
+      const r1 = $('.input-field-five').val();
+      const r2 = r1.toString();
+      const r3 = r2 - 10000;
+      const r4 = r2 - -15000;
+      $('#range-val-one').text('$' + r3 );
+      $('#range-val-oneb').text('$' + r4 );
     }
     updateTextInputTwo() {
-      $('#range-val-two').text('$' + $('.input-field-six').val())
+      const r1 = $('.input-field-six').val();
+      const r2 = r1.toString();
+      const r3 = r2 - 10000;
+      const r4 = r2 - -15000;
+      $('#range-val-two').text('$' + r3 );
+      $('#range-val-twob').text('$' + r4 );
     }
     updateTextInputThree() {
-      $('#range-val-three').text('$' + $('.input-field-eleven').val())
+      const r1 = $('.input-field-eleven').val();
+      const r2 = r1.toString();
+      const r3 = r2 - 10000;
+      const r4 = r2 - -15000;
+      $('#range-val-three').text('$' + r3 );
+      $('#range-val-threeb').text('$' + r4 );
     }
     updateRangeOne() {
       $('.input-field-five').val($('#range-val-one').text())
@@ -25,9 +40,10 @@ export default class refinance1 extends Component {
     updateRangeTwo() {
       $('.input-field-six').val($('#range-val-two').text())
     }
-    updateRangeTwo() {
+    updateRangeThree() {
       $('.input-field-eleven').val($('#range-val-three').text())
     }
+
 
     step1() {
       $('.two').removeClass('step');
@@ -267,30 +283,35 @@ export default class refinance1 extends Component {
           </div>
           <div class="step five">
             <div class="center top-pad">
-              <h4>Approximate Current Loan Balance</h4>
+              <h4>Approximate purchase price</h4>
               <div class="slidecontainer">
                 <div>
-                  <span id="range-val-one" onChange={this.updateRangeOne}>$0
+                  <span id="range-val-one" class="left" onChange={this.updateRangeOne}>$50000
+                  </span>
+                  <span> to </span>
+                  <span id="range-val-oneb" class="right" onChange={this.updateRangeOneb}>$70000
                   </span>
                 </div>
-                <span>$0</span>
+                <span>$60k</span>
                 <input type="range" id="start" name="volume"
-                  min="60000" max="2000000" class="slider input-field-five" id="myRange" onChange={this.updateTextInputOne}/>
+                  min="60000" max="2000000" class="slider input-field-five" id="myRange" step="1000" onChange={this.updateTextInputOne}/>
                 <span>$2M+</span>
               </div>
               <button onClick={this.step5} class="pur-but-five" type="submit">Continue</button>
             </div>
-          </div>
-          <div class="step six">
+          </div>          <div class="step six">
             <div class="center top-pad">
               <h4>Approximate Current Property Value</h4>
               <div class="slidecontainer">
                 <div>
-                  <span id="range-val-two" onChange={this.updateRangeTwo}>$60000
+                  <span id="range-val-two" class="left" onChange={this.updateRangeTwo}>$50000
+                  </span>
+                  <span> to </span>
+                  <span id="range-val-twob" class="right" onChange={this.updateRangeTwob}>$70000
                   </span>
                 </div>
                 <span>$60k</span>
-                <input type="range" min="60000" max="2000000" class="slider input-field-six" id="myRange" onChange={this.updateTextInputTwo}/>
+                <input type="range" min="60000" max="2000000" step="1000" class="slider input-field-six" id="myRange" onChange={this.updateTextInputTwo}/>
                 <span>$2M+</span>
                 {/*<input type="range" min="6" max="200" value="10"/>*/}
               </div>
@@ -302,11 +323,14 @@ export default class refinance1 extends Component {
               <h4>How much cash would you like?</h4>
               <div class="slidecontainer">
                 <div>
-                  <span id="range-val-three" onChange={this.updateRangeThree}>$60000
+                  <span id="range-val-three" class="left" onChange={this.updateRangeThree}>$50000
+                  </span>
+                  <span> to </span>
+                  <span id="range-val-threeb" class="right" onChange={this.updateRangeThreeb}>$70000
                   </span>
                 </div>
                 <span>$60k</span>
-                <input type="range" min="60000" max="2000000" class="slider input-field-eleven" id="myRange" onChange={this.updateTextInputThree}/>
+                <input type="range" min="60000" max="2000000" step="1000" class="slider input-field-eleven" id="myRange" onChange={this.updateTextInputThree}/>
                 <span>$2M+</span>
                 {/*<input type="range" min="6" max="200" value="10"/>*/}
               </div>

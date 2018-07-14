@@ -36,7 +36,7 @@ export default class purchase1 extends Component {
     updateRangeTwo() {
       $('.input-field-six').val($('#range-val-two').text())
     }
-    updateRangeTwo() {
+    updateRangeTwob() {
       $('.input-field-six').val($('#range-val-twob').text())
     }
 
@@ -135,7 +135,7 @@ export default class purchase1 extends Component {
       const phone = $('.input-field-nine').val();
 
       $.ajax({
-        url: "./././mail/mailPurchase.php",
+        url: "../mail/mailPurchase.php",
         method: "POST",
         data: {
           name: name,
@@ -278,7 +278,7 @@ export default class purchase1 extends Component {
                 </div>
                 <span>$60k</span>
                 <input type="range" id="start" name="volume"
-                  min="60000" max="2000000" class="slider input-field-five" id="myRange" onChange={this.updateTextInputOne}/>
+                  min="60000" max="2000000" class="slider input-field-five" id="myRange" step="1000" onChange={this.updateTextInputOne}/>
                 <span>$2M+</span>
               </div>
               <button onClick={this.step5} class="pur-but-five" type="submit">Continue</button>
@@ -296,7 +296,7 @@ export default class purchase1 extends Component {
                   </span>
                 </div>
                 <span>$60k</span>
-                <input type="range" min="60000" max="2000000" class="slider input-field-six" id="myRange" onChange={this.updateTextInputTwo}/>
+                <input type="range" min="60000" max="2000000" class="slider input-field-six" id="myRange" step="1000" onChange={this.updateTextInputTwo}/>
                 <span>$2M+</span>
                 {/*<input type="range" min="6" max="200" value="10"/>*/}
               </div>
