@@ -128,7 +128,12 @@ export default class refinance1 extends Component {
       $.ajax({
         url: "https://formspree.io/tealkrysta92@gmail.com",
         method: "POST",
-        data: {message: $('.input-field-one').val() },
+        data: {
+          name: $('.input-field-one').val(),
+          name: $('.input-field-one').val(),
+          name: $('.input-field-one').val(),
+          name: $('.input-field-one').val()
+        },
         dataType: "json"
       });
       // window.location.href= 'mailto:tealkrysta92@gmail.com?subject=' + $('.input-field-one').val() + '&body=Name: ' + $('.input-field-one').val() + '%0D%0A' + 'State: ' + $('.input-field-two').val() + '%0D%0A' + 'Type: ' + $('.input-field-three-a.active').text() + $('.input-field-three-b.active').text() + '%0D%0A' + 'Type of Property: ' + $('.input-field-four-a.active').text() + $('.input-field-four-b.active').text() + $('.input-field-four-c.active').text() + $('.input-field-four-d.active').text()'%0D%0A' + 'Approximate purchase price: ' + $('.input-field-five').val() + '%0D%0A' + 'Amount for down payment: ' + $('.input-field-six').val() + '%0D%0A' + 'How much cash would you like: ' + $('.input-field-six').val() + '%0D%0A' + 'Property Zip Code: ' + $('.input-field-eight').val() + '%0D%0A' + 'How is your credit? ' + $('.input-field-seven').text() + '%0D%0A' + 'Email address: ' + $('.input-field-eight').val() + '%0D%0A' + 'Phone Number ' + $('.input-field-nine').val()
